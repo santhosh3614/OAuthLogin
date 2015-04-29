@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/fb_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fb_login" />
+
+        <Button
+            android:id="@+id/twitter_login_btn"
+            android:layout_below="@+id/fb_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twitter_login" />
+
+        <Button
+            android:id="@+id/gmail_login_btn"
+            android:layout_below="@+id/twitter_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gmail_login" />
+
+        <RelativeLayout
+            android:layout_below="@+id/gmail_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/profile_pic_imageview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@android:drawable/alert_dark_frame" />
+
+            <TextView
+                android:id="@+id/d"
+                android:layout_below="@+id/profile_pic_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name" />
+
+            <TextView
+                android:id="@+id/profile_name_txtview"
+                android:layout_below="@+id/profile_pic_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_toRightOf="@+id/d"
+                android:text="@string/name" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/intr_rel"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/poor_interner_connection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
